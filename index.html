@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mi web accesible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header role="contentinfo" tabindex="0">Esta es la cabecera de mi web super accesible</header>
+    <nav role="navigation">
+        <ul>
+            <li><a role="link" class="active" href="#home">VOLVER</a></li>
+            <li><a role="link" href="#news">Noticias</a></li>
+            <li><a role="link" href="#contact">Contacto</a></li>
+            <li class="right"><a role="link" href="#about">Informacion</a></li>
+        </ul>
+    </nav>
+    <aside role="complementary">
+        <h3 tabindex="0">Descripcion de mi web accesible.</h3>
+        <p tabindex="0">Este es el resumen de todos los conceptos que hemos aprendido de accesibilidad
+            aplicando dichos conceptos a esta pagina. Esto sera un resumen extraido de
+            <a role="link" href="https://developers.google.com/web/fundamentals/accessibility"> la pagina de
+                accesibilidadde
+                google.</a>
+        </p>
+        <h3 tabindex="0">Enlaces de interes</h3>
+        <ul role="tree">
+            <li tabindex="0" role="treeitem"><a role="link"
+                    href="http://udacity.github.io/ud891/lesson3-semantics-built-in/02-chromevox-lite/">
+                    Simulador de un lector de pantalla</a> Ademas la pantalla se verá borrosa para saber mejor como se
+                siente alguien con esa discapacidad</li>
+            <li role="treeitem">El la web de <a role="link" href="https://www.w3.org/TR/html-aria/#docconformance">
+                    w3.org</a> Estan la descripcion de todos los roles que se pueden usar</li>
+        </ul>
+        <h3 tabindex="0">Lectores de pantalla</h3>
+        <ul role="tree">
+            <li role="tree"><a role="link" href="http://www.nvaccess.org/">Lector NVDA</a></li>
+            <li role="tree"><a role="link" href="http://www.webbie.org.uk/thunder/">Lector thunder</a></li>
+            <li role="tree"><a role="link" href="https://webinsight.cs.washington.edu/wa/">Lector webAnywhere</a></li>
+            <h6>Lectores de pago:</h6>
+            <li role="tree"><a role="link" href="http://www.freedomscientific.com/">Lector JAWS</a></li>
+            <li role="tree"><a role="link" href="https://www.aisquared.com/products/zoomtext/">Lector ZoomText</a></li>
+            <li role="tree"><a role="link" href="https://yourdolphin.com/product/version?id=182">Lector de supernova</a>
+            </li>
+        </ul>
+
+    </aside>
+
+    <main role="main">
+
+        <section>
+            <article>
+                <h1 tabindex="0" role="alert">FORMULARIO DE PRUEBA</h1>
+                <h2>El unico uso que tuene este formulario, es poner en practica las etiquetas de WAI-ARIA y sus roles
+                </h2>
+                <div class="formulario">
+                    <form role="form" action="">
+                        <div>
+                            <label for="entrada1">Entrada 1: </label>
+                            <input role="textbox" id="entrada1" type="text" value="" placeholder="Escribe aqui"
+                                aria-placeholder="" required aria-required="true">
+                        </div>
+                        <div>
+                            <label for="entrada2">Entrada 2: </label>
+                            <input role="textbox" id="entrada2" type="text" value="" placeholder="Escribe aqui"
+                                aria-placeholder="" required aria-required="true">
+                        </div>
+                        <div>
+                            <label for="entrada3">Entrada 3: </label>
+                            <input role="textbox" id="entrada3" type="text" value="" placeholder="Escribe aqui"
+                                aria-placeholder="" required aria-required="true">
+                        </div>
+                        <div>
+                            <label for="seleccion">Elije una opcion</label>
+                            <select name="seleccion" id="seleccion">
+                                <option role="option" value="1">Opcion 1</option>
+                                <option role="option" value="2">Opcion 2</option>
+                                <option role="option" value="3">Opcion 3</option>
+                                <option role="option" value="4">Opcion 4</option>
+                                <option role="option" value="5">Opcion 5</option>
+                                <option role="option" value="6">Opcion 6</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p tabindex="0"><strong>Elije una opcion:</strong></p>
+                            <div>
+                                <label for="femenino">Femenino: </label><input role="radio" type="radio" id="femenino"
+                                    name="sexo" value="Femenino">
+                            </div>
+                            <div>
+                                <label for="masculino">Masculino: </label><input role="radio" type="radio"
+                                    id="masculino" name="sexo" value="Masculino">
+                            </div>
+                        </div>
+                        <div>
+                            <p tabindex="0"><strong>Rango de edad:</strong></p>
+                            <div>
+                                <label for="10anos">De 10 a 20 </label><input tabindex="0" name="edad" role="group"
+                                    role="radio" type="radio" id="10anos" value="10-20">
+                            </div>
+                            <div>
+                                <label for="20anos">De 10 a 20 </label><input tabindex="0" name="edad" role="group"
+                                    role="radio" type="radio" id="20anos" value="10-20">
+                            </div>
+                            <div>
+                                <label for="30anos">De 20 a 30 </label><input tabindex="0" name="edad" role="group"
+                                    role="radio" type="radio" id="30anos" value="20-30">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="premium">Premium: </label><input role="checkbox" type="checkbox" id="premium">
+                        </div>
+                        <button role="button" type="submit">Enviar</button>
+                        <button role="button" type="reset">Borrar</button>
+                    </form>
+                    <div tabindex="0" class="explicacion">
+                        <h2>En este formularios se utilizan varios roles y etiquedas WAI-ARIA</h2>
+                        <ul tabindex="0" role="tree">
+                            <li tabindex="0" role="treeitem">En las etiquetas label pongo eltraibuto for con el valor
+                                del id del
+                                input al que referencio</li>
+                            <li tabindex="0" role="treeitem">aria-required=true: para que el lector de pantalla me diga
+                                que es
+                                obligatorio</li>
+                            <li tabindex="0" role="treeitem">aria-placeholder="": con esto me dira lo que le he puesto
+                                en el atributo
+                                de placeholder</li>
+                            <li tabindex="0" role="treeitem">role="textbox": Con este role, me dita que tipo de entrada
+                                es</li>
+                            <li tabindex="0" role="treeitem">role="option": otro tipo de role, donde le indico que tipo
+                                de elemento
+                                estamos</li>
+                            <li tabindex="0" role="treeitem">role="checkbox": Le estamos indicando que es una casilla de
+                                verificacion
+                            </li>
+                            <li tabindex="0" role="treeitem">role="button": El tipo de entrada es de tipo button</li>
+                            <li tabindex="0" role="treeitem">role="tree": Dentro de esta lista se usa ese role, para el
+                                elmento que
+                                contiene los elementos de esta lista</li>
+                            <li tabindex="0" role="treeitem">role="treeitem": Se coloca en cada elementos de esta lista
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article tabindex="0" id="accesibilidad" role="article">
+                <h2>Accesibilidad</h2>
+                <P>Este juego de documentos es una versión basada en texto de parte del contenido cubierto en el Curso
+                    de Udacity sobre Accesibilidad. En lugar de ser una transcripción directa del curso den video, sirve
+                    como un tratamientos más conciso de los principios y prácticas de accesibilidad, usando el contenido
+                    original del curso como base.</P>
+                <p>Comprender la accesibilidad, su alcance y su impacto pueden hacer de ti un mejor programador web. La
+                    intención de esta guía es ayudarte a comprender cómo puedes hacer que tus sitios web sean accesibles
+                    y fáciles de usar para todos.</p>
+                <h3>¿Qué es la accesibilidad?</h3>
+                <p>A grandes rasgos, cuando decimos que un sitio es accesible, queremos decir que el contenido del sitio
+                    está disponible y, literalmente, cualquiera puede manejar su funcionalidad. Como programadores, es
+                    sencillo asumir que todos los usuarios pueden ver y usar un teclado, mouse o pantalla táctil, y
+                    pueden interactuar con el contenido de tu página de la misma forma que tú.</p>
+                <h4>En formularios</h4>
+                <p>Este formulario tiene varios problemas de accesibilidad.</p>
+                <ul role="tree" class="lista">
+                    <li role="treeitem">El texto tiene poco contraste, lo cual dificulta la lectura para usuarios con
+                        baja visión.</li>
+                    <li role="treeitem">Tener etiquetas a la izquierda y campos a la derecha hace que sea difícil para
+                        muchas personas
+                        asociarlos, y casi imposible para alguien que necesita acercar para usar la página;.</li>
+                    <li role="treeitem">En los inputs de tipo checkbox, la etiqueta tiene que estar lo mas cerca posible
+                        de la casilla
+                        donde tienes que hacer el click</li>
+                </ul>
+
+            </article>
+            <article tabindex="0" role="article">
+                <h2>Pautas de accesibilidad a contenido web</h2>
+                <p>Conjunto de pautas y buenas paracticas a la hora de crear una web.</p>
+                <ul role="tree">
+                    <li role="treeitem"><strong>Perceptible:</strong>Asegurarse de que personas que no pueden acceder a
+                        la informacion
+                        mediante el sentido de la vista, puedan acceder.</li>
+                    <li role="treeitem"><strong>Manejable: </strong>Que sea tambien manejable mediante el teclado.</li>
+                    <li role="treeitem"><strong>Comprensible:</strong>Interfaz amigable</li>
+                    <li role="treeitem"><strong>Sólido:</strong>Que sea accesible por la mayoria de los navegadores.
+                    </li>
+                </ul>
+            </article>
+            <article tabindex="0" role="article">
+                <h2>discapacidad visual</h2>
+                <p>Existe una enorme variedad y, naturalmente, existe una gran variedad de adaptaciones que usan las
+                    personas de esta categoría: algunos usan lector de pantalla o pantalla braille (incluso supe de una
+                    mujer que lee braille en la pantalla porque es más fácil de ver que el texto impreso) o pueden usar
+                    tecnología de texto a oralidad sin la funcionalidad total de lector de pantalla, o pueden usar una
+                    lupa de pantalla que hace acercamiento a parte de la pantalla, o pueden usar el zoom de su navegador
+                    para agrandar las letras. También pueden usar opciones de alto contraste, como modo de alto
+                    contraste del sistema operativo, una extensión de navegador de alto contraste o un tema de alto
+                    contraste para un sitio web.</p>
+            </article>
+            <article tabindex="0" role="article">
+                <h2>¿Qué sucede con las discapacidades motrices?</h2>
+                <p>Los usuarios con discapacidad motriz usan teclado, dispositivo de interrupción, control de voz o
+                    hasta un dispositivo de rastreo ocular para interactuar con su computadora.</p>
+            </article>
+            <article tabindex="0" role="article">
+                <h2>Discapacidades auditivas.</h2>
+                <p>Para usuarios con discapacidad auditiva, tenemos que asegurarnos de no descansar en el sonido, por
+                    eso tenemos que usar subtítulos estilo de video y transcripciones, y brindar algún tipo de
+                    alternativa si el sonido forma parte de la interfaz.</p>
+            </article>
+        </section>
+        <section>
+            <h1>EL FOCO</h1>
+            <article tabindex="0" role="article">
+                <h2>¿Qué es el foco?</h2>
+                <p>El foco determina en qué parte de la página tienen lugar los eventos del teclado en un momento
+                    determinado. Por ejemplo, si pones el foco en un campo de entrada de texto y comienzas a escribir,
+                    el campo de entrada recibe los eventos del teclado y muestra los caracteres que escribes. Mientras
+                    tenga el foco, también recibirá entradas pegadas desde el portapapeles.
+                </p>
+                <p>Aunque no todos los elementos se pueden enfocar, y no tiene utilidad para que se enfoquen.</p>
+                <p>Por lo general en partes que son enfocables como los elementos button, se enfocaran despues de pulsar
+                    al tab, iran en el orden que se han colocado en el DOM. Aunque si usas propiedades css como float,
+                    te colocara los botones en otro orden, pero el orden con las tabulaciones será el mismo, y dejará de
+                    ser intuitivo
+                </p>
+            </article>
+            <article tabindex="0" role="article">
+                <h2>Uso de tabindex</h2>
+                <p> <strong>tabindex="0": </strong>Inserta un elemento en el orden natural de pestañas. El elemento
+                    puede tomar el foco si
+                    se presiona la tecla Tab, y el elemento puede tomar el foco mediante una llamada a su método focus()
+                </p>
+                <p>tabindex="-1": Quita un elemento del orden natural de pestañas, pero el elemento todavía puede tomar
+                    el foco mediante una llamada a su método focus().
+                <p>Usando otras numeraciones en tabindex, se salta el orden natural de los enfoque. En los botones a
+                    continuacion le hemos puesto otras numeraciones</p>
+                <div id="botones">
+                    <button role="button" tabindex="5">Usando el tabindex="5"</button>
+                    <button role="button" id="foo" tabindex="-1">Usando en tabindex="-1"</button>
+                    <button role="button" onclick="foo.focus();">Usando el metodo focus()</button></p>
+                    <button role="button" tabindex="4">Usando el tabindex="4"</button>
+                    <button role="button" tabindex="6">Usando el tabindex="6"</button>
+                    <button role="button" tabindex="9">Usando el tabindex="9"</button>
+                    <button role="button" tabindex="7">Usando el tabindex="7"</button>
+                    <button role="button" tabindex="0">Usando el tabindex="0"</button>
+                </div>
+                <h3>Importante:</h3>
+                <p role="alert">
+                    Hay que tener en cuenta, que usando estos tabindex distintos de 0, me van a penalizar en cuanto a la
+                    accesibilidad, ya que cambian el orden logico de ejecucion con el tabulador
+                    y no tendran un orden logico, a no ser que lo veas claro, pero esto solo es un ejemplo.
+                </p>
+            </article>
+            <article tabindex="0" role="article" id="foto1">
+                <h2>Articulo con una imagen.</h2>
+                <img role="img" tabindex="0" aria-labelledby="leer" src="recursos/mariquitaVerde_250px.jpg"
+                    alt="Imagen colorida de una marquita verde">
+                <div id="leer2">
+                    <p>El parrafo que hay a continuacion, es lo que va a leer el lector de pantalla, gracias a que la
+                        imagen tiene la etqueta de aira-labelleby=leer, que es el id del parrafo que va a leer</p>
+                    <p id="leer">Aqui pongo en practica como conectar una imagen con una etiqueta cualquiera
+                        a traves del aria bla bla bla</p>
+                    <p><strong>Estos son los elemento de accesibilidad que se usan para la seccion de esta
+                            imagen</strong></p>
+                    <ul role="tree">
+                        <li role="treeitem">Los elementos de esta lista de <strong>tree, treeitem</strong> </li>
+                        <li role="treeitem">role=img: Asi el lector de pantalla nos dira donde nos encontramos</li>
+                        <li role="treeitem">La etiqueta alt siempre estará aunque sea vacia</li>
+                        <li role="treeitem">role=article, para indicarle al lector que estamos en otro articulo</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article tabindex="0" role="article">
+                <h2>WAI-ARIA</h2>
+                <p lang="es">En el siguiente elemento, hemos agregado los atributos role y aria-checked para identificar
+                    explícitamente el
+                    elemento como casilla de verificación y para especificar que está marcada de manera predeterminada.
+                    Este artículo de lista ahora se agregará al árbol de accesibilidad y un lector de pantalla los
+                    informará correctamente como casilla de verificación.</p>
+
+                <p lang="es">ARIA funciona cambiando y mejorando el árbol de accesibilidad del DOM estándar.
+                    Pero ni nos da foco ni acceso desde el teclado
+                </p>
+                <p>Por ejemplo, no es necesario definir semantics predeterminados. Sin
+                    importar su uso, un elemento input type="checkbox" HTML estándar no necesita un atributo de ARIA
+                    role="checkbox" adicional para anunciarse correctamente.
+
+                </p>
+                <h3>¿Que se puede hacer con ARIA?</h3>
+                <ul>
+                    <LI>ARIA puede expresar relaciones de semantic entre elementos que extienden la conexión
+                        principal/secundario estándar, como un barra de desplazamiento personalizada que controla una
+                        región
+                        específica. Por ejemplo:</LI>
+                </ul>
+                <div aria-live="true">
+                    <span>Ejemplo con aria-live</span>
+                </div>
+            </article>
+            <article tabindex="0" role="article" id="foto">
+                <h2>Articulo con la imagen que nos da el lihthouse de google.</h2>
+                <img role="img" tabindex="0" aria-labelledby="leer3" src="recursos/reporte.jpg"
+                    alt="Imagen del reporte de accesiblilidad que nos da google">
+                <div">
+                    <p>El parrafo que hay a continuacion, es lo que va a leer el lector de pantalla, gracias a que la
+                        imagen tiene la etqueta de aira-labelleby=leer, que es el id del parrafo que va a leer</p>
+                    <p id="leer3">Este es el reporte de accesibilidad que nos da la herramienta de google, y nos da un
+                        buen reporte en todos, menos en la parte de accesibiñidad donde solo se obtiene un 77 sobre 100.
+                        He de decir en mi defensa, qeu me quita puntos por poner esa serie de botones con un tabindex
+                        distinto de 0, eso debe despistar al usuario que necesita la accesibilidad
+                    </p>
+
+
+                    </div>
+            </article>
+        </section>
+
+    </main>
+
+
+    <footer tabindex="0" role="contentinfo" tabindex="0">Este es el pie de pagina de mi web super accesible</footer>
+</body>
+
+</html>
